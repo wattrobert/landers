@@ -58,7 +58,7 @@ gulp.task('kk-root', function() {
 })
 
 gulp.task('default', ['scripts', 'styles', 'images', 'kk'], function() {
-    gulp.src('./src/index.html')
+    gulp.src('./src/index.php')
         .pipe(gulp.dest('./dist'));
 })
 
@@ -66,5 +66,5 @@ gulp.task('watch', ['default'], function() {
     gulp.watch('./src/*.scss', ['styles']);
     gulp.watch('./src/*.js', ['scripts']);
     gulp.watch('./src/assets/**/*', ['images']);
-    
+
 })

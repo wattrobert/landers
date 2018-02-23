@@ -1,3 +1,7 @@
 @import 'variables';
 
 @import "node_modules/bootstrap/scss/bootstrap";
+
+.fixed-top + main {
+    margin-top:$nav-link-height + ($navbar-padding-y * 2);
+}

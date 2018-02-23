@@ -83,7 +83,8 @@ gulp.task('clean:index', function() {
 
 gulp.task('develop', ['index', 'scripts', 'styles', 'images', 'kk'], function() {
     browser.init({
-        server: "./dist/"
+        server: "./dist/",
+        tunnel: true
     })
     gulp.watch('./src/*.scss', ['styles']);
     gulp.watch('./src/*.js', ['scripts']);

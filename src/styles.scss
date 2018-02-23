@@ -1,7 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:300,400,400i,700');
 @import 'variables';
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
+body, main, footer {
+    overflow-x:hidden !important;
+}
+
 .fixed-top + main {
     margin-top:$nav-link-height + ($navbar-padding-y * 2);
+}
+
+.btn {
+    font-family:$headings-font-family;
+}
+
+footer {
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+}
+
+#secondaryText {
+    opacity:0;
+    transition: opacity 300ms ease-in-out;
+}
+
+.jumbotron {
+    height:75vh;
+    background-color: transparent;
+    &:first-of-type {
+        position:relative;
+        img {
+            position:fixed;
+            z-index:100;
+            max-width:450px;
+            left:0;
+            right:0;
+            top:$jumbotron-padding;
+            margin:0 $jumbotron-padding;
+        }
+        .fixed-image-bg {
+            background-image: url('../assets/images/bg-01.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: -260px 42px;
+            z-index:-1;
+            position:fixed;
+            left:0;
+            right:0;
+            top:0;
+            height:89vh;
+            &:after {
+                content:'';
+                position:absolute;
+                top:calc(100% - 15px);
+                left:0;
+                right:0;
+                height:calc(25vh + 18px);
+                @include gradient-y(transparent, $primary, 0%, 15px);
+            }
+        }
+        .container {
+            padding-top:50px;
+        }
+        .gradient-fade {
+
+            z-index:0;
+            position:fixed;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+            &:after {
+                position:absolute;
+                left:0;
+                right:0;
+                top:0;
+                height:140px;
+                // background-color:#8BB9DB;
+                @include gradient-y(rgb(139, 185, 219), rgba(139, 185, 219, 0), 50%, 100%);
+                content:'';
+            }
+        }
+        .header {
+            margin-top:15px;
+            max-width:75%;
+            font-style:italic;
+        }
+        .text {
+            margin-right:40%;
+            font-weight:bold;
+        }
+        .no-text {
+            float: right; 
+            width: 0px; 
+            height: 24px;
+        }
+        .no-text-a {
+            width: 120px;
+            height: 36px;
+            float:right;
+            clear:right;
+        }
+        .no-text-b {
+            width: 150px;
+            height: 23px;
+            float:right;
+            clear:right;
+        }
+        .no-text-c {
+            width: 200px;
+            height: 40px;
+            float:right;
+            clear:right;
+        }
+    }
+    &:nth-of-type(2) {
+        background-color:transparentize($primary, 0.3);
+        position:relative;
+        &:before {
+            background-color:transparentize($primary, 0.3);
+            -webkit-mask-image: url('../assets/images/bg-02-mask.svg');
+            -webkit-mask-repeat: no-repeat;
+            -webkit-mask-position:center bottom;
+            -webkit-mask-size:contain;
+            height:300px;
+            left:-1px;
+            right:-1px;
+            bottom:100%;
+            position:absolute;
+            content:'';
+        }
+        .container {
+            position:relative;
+            top:-150px;
+            ul {
+                padding-left: 5px;
+            }
+        }
+    }
+}
+.mask-transition {
+    background-color:transparentize($primary, 0.3);
+    -webkit-mask-image: url('../assets/images/bg-02-mask.svg');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position:center bottom;
+    -webkit-mask-size:contain;
+    height:300px;
+    left:-1px;
+    right:-1px;
+    bottom:-1px;
+    position:absolute;
+}
+
+
+@include media-breakpoint-up('200px') {
+    .btn.btn-default {
+        background-color:black !important;
+    }
+}
+
+@media(min-height:600px) {
+    .jumbotron {
+        &:first-of-type {
+            .fixed-image-bg {
+                background-position: -350px 42px;
+            }
+        }
+    }
 }

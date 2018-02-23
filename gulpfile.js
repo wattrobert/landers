@@ -22,7 +22,7 @@ gulp.task('clean:scripts', function() {
         .pipe(clean());
 })
 gulp.task('clean:kk', function() {
-    return gulp.src(['./dist/exit.php', './dist/thank-you.php', './dist/kowboykit/**/*.php'])
+    return gulp.src(['./dist/**/*.php'])
         .pipe(clean());
 })
 gulp.task('styles', ['clean:styles'], function() {

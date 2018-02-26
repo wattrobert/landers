@@ -8,7 +8,6 @@ $(window).on('load', function() {
     window.scrollTo(0,0);
 })
 
-
 $(window).bind('scroll', function(event) {
     var diff = document.documentElement.offsetHeight - window.innerHeight;
     var percentage = ((document.documentElement.scrollTop || document.body.scrollTop) / diff);

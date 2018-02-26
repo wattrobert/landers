@@ -156,18 +156,81 @@ footer {
 }
 
 
-@include media-breakpoint-up('200px') {
-    .btn.btn-default {
-        background-color:black !important;
-    }
-}
-
 @media(min-height:600px) {
     .jumbotron {
         &:first-of-type {
             .fixed-image-bg {
-                background-position: -350px 42px;
+                background-position: -325px 42px;
             }
         }
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    .fixed-image-bg {
+        background-position:center center !important;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .jumbotron {
+        &:first-of-type {
+            img {
+                position:relative;
+                z-index:100;
+                right:auto;
+                top:auto;
+                margin:0 auto;
+            }
+            .fixed-image-bg {
+                background-position: center top;
+            }
+            .header {
+                font-size:2em;
+            }
+            .container {
+                max-width:660px;
+                text-align:left !important;
+                padding-top:0;
+                font-size:1.2em;
+            }
+            .no-text {
+                height:0;
+            }
+            .no-text-a {
+                width:200px;
+            }
+        }
+        &:nth-of-type(2) {
+            &:before {
+                width: 100vw;
+                transform: scale(2.2, 0.4) translateY(225px);
+                -webkit-mask-position: bottom center
+            }
+            .container {
+                max-width:660px;
+                font-size:1.2em;
+                top:-150px;
+            }
+            iframe {
+                margin:0 auto;
+                width:400px;
+                height:250px;
+            }
+            #secondaryText {
+                width: 436px;
+                margin-left: auto;
+                margin-top: -100px !important
+            }
+        }
+        
+    }
+    .mask-transition {
+        -webkit-mask-image: url('../assets/images/bg-02-mask-desktop.svg');
+    }
+
+    button {
+        width:400px !important;
+        margin:0 auto;
     }
 }

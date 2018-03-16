@@ -20,6 +20,7 @@ footer {
     left:0;
     right:0;
     bottom:0;
+    z-index:101;
 }
 
 #secondaryText {
@@ -28,9 +29,9 @@ footer {
 }
 
 .jumbotron {
-    height:75vh;
     background-color: transparent;
     &:first-of-type {
+        height:50vh;
         position:relative;
         img {
             position:fixed;
@@ -67,7 +68,7 @@ footer {
         }
         .gradient-fade {
 
-            z-index:0;
+            z-index:99;
             position:fixed;
             left:0;
             right:0;
@@ -89,57 +90,24 @@ footer {
             max-width:75%;
             font-style:italic;
         }
-        .text {
-            margin-right:40%;
-            font-weight:bold;
-        }
-        .no-text {
-            float: right; 
-            width: 0px; 
-            height: 24px;
-        }
-        .no-text-a {
-            width: 120px;
-            height: 36px;
-            float:right;
-            clear:right;
-        }
-        .no-text-b {
-            width: 150px;
-            height: 23px;
-            float:right;
-            clear:right;
-        }
-        .no-text-c {
-            width: 200px;
-            height: 40px;
-            float:right;
-            clear:right;
-        }
     }
-    &:nth-of-type(2) {
-        background-color:transparentize($primary, 0.3);
+    &.second-section {
         position:relative;
-        &:before {
-            background-color:transparentize($primary, 0.3);
-            -webkit-mask-image: url('../assets/images/bg-02-mask.svg');
-            -webkit-mask-repeat: no-repeat;
-            -webkit-mask-position:center bottom;
-            -webkit-mask-size:contain;
-            height:300px;
-            left:-1px;
-            right:-1px;
-            bottom:100%;
-            position:absolute;
-            content:'';
-        }
-        .container {
-            position:relative;
-            top:-150px;
-            ul {
-                padding-left: 5px;
-            }
-        }
+        height:calc(100vh - 154px);
+        background-color:transparentize($primary, 0.3);
+        // &:before {
+        //     background-color:transparentize($primary, 0.3);
+        //     -webkit-mask-image: url('../assets/images/bg-02-mask.svg');
+        //     -webkit-mask-repeat: no-repeat;
+        //     -webkit-mask-position:center bottom;
+        //     -webkit-mask-size:contain;
+        //     height:300px;
+        //     left:-1px;
+        //     right:-1px;
+        //     bottom:100%;
+        //     position:absolute;
+        //     content:'';
+        // }
     }
 }
 .mask-transition {
@@ -148,11 +116,7 @@ footer {
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position:center bottom;
     -webkit-mask-size:contain;
-    height:300px;
-    left:-1px;
-    right:-1px;
-    bottom:-1px;
-    position:absolute;
+    height:154px;
 }
 
 

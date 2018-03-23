@@ -5,7 +5,6 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js">
 <!--<![endif]-->
-
 <head>
     <?php require_once($_SERVER['DOCUMENT_ROOT'].'/kowboykit/includes/money.php') ?>
     <meta charset="utf-8">
@@ -19,6 +18,7 @@
     <link rel="icon"
           type="image/x-icon"
           href="assets/images/favicon.ico">
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">  
 
     <link rel="stylesheet"
           href="css/styles.css">
@@ -28,16 +28,75 @@
     <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <main>
-        <div class="jumbotron rounded-0 text-center bg-primary text-white">
-            <div class="container">
-                <h1>Lander Seed </h1>
-                <p class="lead">A starting point for landers run on the KowboyKit admin system.</p>
-            </div>
+    <div class="fixed-image"></div>
+    <nav class="fixed-top bg-sky">
+        <div class="container">
+            <img class="logo" src="assets/images/logos/svg/white.svg" alt="LOGO">
         </div>
+    </nav>
+    <main>
+        <section id="one">
+            <div class="container py-4 bg-transparent vh-75">
+                <header>
+                    <h1><em>Outdrive The Competition</em></h1>
+                    <p class="lead"><em>Revolutionary Sweat Absorbing Hat Liners</em></p>
+                </header>
+                <div class="feature-list">
+                    <ul class="fa-ul">
+                        <li><i class="fa-li fa fa-check text-success"></i>Stop sweat stains</li>
+                        <li><i class="fa-li fa fa-check text-success"></i>Keep eyes clear of sweat</li>
+                        <li><i class="fa-li fa fa-check text-success"></i>Prevent acne</li>
+                        <li><i class="fa-li fa fa-check text-success"></i>Reuse up to 5 rounds</li>
+                        <li><i class="fa-li fa fa-check text-success"></i>Dispose and replace as needed</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="two" class="vh-100 text-white">
+            <div class="container">
+                <div class="text-center">
+                    <h2>Game Changer</h2>
+                    <p>Sweat Protection. Delivered.</p>
+                    <iframe src="https://www.youtube.com/embed/FboHGl0Jco0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                <div class="my-5">
+                    <div class="row align-items-center">
+                        <div class="col-4">
+                            <img src="http://via.placeholder.com/300x300" class="mw-100" alt="">
+                        </div>
+                        <div class="col-8">
+                            <p>This is where some descriptive text about the image to the left would go. Some interesting stuff that can get people excited about the product.</p>
+                        </div>
+                    </div>
+                    <div class="row mt-4 align-items-center">
+                        <div class="col-8 text-right">
+                            <p>This is where some descriptive text about the image to the right would go. Some interesting stuff that can get people excited about the product.</p>
+                        </div>
+                        <div class="col-4">
+                            <img src="http://via.placeholder.com/300x300" class="mw-100" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="py-3 text-center">
+                    <img src="http://via.placeholder.com/600x200?text=Endorsed+By" class="mw-100" alt="">
+                </div>
+                <div class="mb-5 mt-4 text-center">
+
+                    <i class="fa fa-angle-double-down fa-4x text-warning"></i>
+                </div>
+            </div>
+        </section>
     </main>
+    <footer class="fixed-bottom pb-3 pt-5">
+        <div class="container text-center">
+            <a class="btn btn-light btn-lg btn-block" href="#">BUY NOW</a>
+        </div>
+    </nav>
 
-
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
     <script src="scripts/main.js"></script>
 </body>
 

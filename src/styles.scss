@@ -2,6 +2,28 @@
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
-.fixed-top + main {
-    margin-top:$nav-link-height + ($navbar-padding-y * 2);
+
+
+$body-offset:($nav-link-height + ($navbar-padding-y * 2));
+
+body {
+    margin-top:$body-offset;
+    .is-contiained {
+        margin-top:$body-offset + 1;
+    }
+}
+
+section {
+    min-height:calc(100vh - #{$body-offset});
+}
+
+a[id] {
+    position:relative;
+    display:block;
+    top: -$body-offset;
+    visibility: hidden;
+}
+
+.jumbotron {
+    border-radius:0;
 }
